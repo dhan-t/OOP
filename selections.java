@@ -4,6 +4,12 @@ public class App {
 
     static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+
+        selection();
+
+    }
+
     public static void selection() {
         System.out.println(
                 "Choose a figure below: \n(a). Square \n(b). Left Half Triangle \n(c). Inverted Left Half Triangle \n(d). Left Hollow Half Triangle \n(e). Inverted Left Hollow Half Triangle \n(f). Right Half Triangle \n(g). Inverted Right Half Triangle \n(h). Right Hollow Half Triangle \n(i). Inverted Right Hollow Half Triangle \n(j). Full Triangle \n(k). Inverted Full Triangle \n(l). Full Hollow Triangle \n(m). Inverted Full Hollow Triangle \n(n). Half Left Diamond \n(o). Half Right Diamond ");
@@ -124,7 +130,7 @@ public class App {
         StringBuilder output = new StringBuilder();
         for (int r = n; r >= 1; r--) {
             for (int c = 1; c <= r; ++c) {
-                output.append("* ");
+                output.append("*");
             }
             output.append("\n");
         }
@@ -138,7 +144,7 @@ public class App {
         for (int r = 1; r <= n; r++) {
             for (int c = 1; c <= r; ++c) {
                 if (c == 1 || r == n || c == r) {
-                    output.append("* ");
+                    output.append("*");
                 } else {
                     output.append(" ");
                 }
@@ -155,7 +161,7 @@ public class App {
         for (int r = n; r >= 1; r--) {
             for (int c = 1; c <= r; ++c) {
                 if (c == 1 || r == n || c == r) {
-                    output.append("* ");
+                    output.append("*");
                 } else {
                     output.append(" ");
                 }
@@ -170,14 +176,9 @@ public class App {
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
         for (int r = 1; r <= n; r++) {
-            for (int s = n; s >= r; s -= 1) {
-                output.append(" ");
-
+            for (int s = 1; s <= r; s++) {
+                output.append("*");
             }
-            for (int o = 1; o <= r; ++o) {
-                output.append("* ");
-            }
-
             output.append("\n");
         }
         return output.toString();
@@ -188,13 +189,11 @@ public class App {
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
         for (int r = n; r >= 1; r--) {
-            for (int s = n; s >= r; s -= 1) {
-                output.append(" ");
-            }
-            for (int o = 1; o <= r; ++o) {
-                output.append("* ");
+            for (int s = 1; s <= r; s++) {
+                output.append("*");
             }
             output.append("\n");
+
         }
         return output.toString();
     }
@@ -203,13 +202,10 @@ public class App {
 
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
-        for (int r = 1; r <= 1; r++) {
-            for (int s = n; s >= r; s -= 1) {
-                output.append(" ");
-            }
-            for (int o = 1; o <= r; ++o) {
-                if (o == 1 || r == n || o == r) {
-                    output.append("* ");
+        for (int r = 1; r <= n; r++) {
+            for (int s = 1; s <= r; s++) {
+                if (r == 1 || r == s || r == n) {
+                    output.append("*");
                 } else {
                     output.append(" ");
                 }
@@ -230,7 +226,7 @@ public class App {
             }
             for (int o = 1; o <= r; ++o) {
                 if (o == 1 || r == n || o == r) {
-                    output.append("* ");
+                    output.append("*");
                 } else {
                     output.append(" ");
                 }
@@ -245,15 +241,16 @@ public class App {
 
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
-        for (int r = n; r <= 1; r++) {
+        for (int r = 1; r <= n; r++) {
             for (int s = n; s >= r; s -= 1) {
                 output.append(" ");
+
             }
-            for (int o = 1; o <= r * 2 - 1; ++o) {
+            for (int o = 1; o <= r; ++o) {
                 output.append("* ");
             }
-            output.append("\n");
 
+            output.append("\n");
         }
         return output.toString();
     }
@@ -262,15 +259,14 @@ public class App {
 
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
-        for (int r = 1; r == n; r--) {
+        for (int r = n; r >= 1; r--) {
             for (int s = n; s >= r; s -= 1) {
                 output.append(" ");
             }
-            for (int o = 1; o <= r * 2 - 1; ++o) {
+            for (int o = 1; o <= r; ++o) {
                 output.append("* ");
             }
             output.append("\n");
-
         }
         return output.toString();
     }
@@ -343,28 +339,30 @@ public class App {
 
         int n = sc.nextInt();
         StringBuilder output = new StringBuilder();
-        for (int r = 1; r <= n / 2; r++) {
+        for (int r = 1; r <= n; r++) {
             for (int o = 1; o <= r; ++o) {
-                output.append("* ");
+                if (o == 1 || r == n || o == r) {
+                    output.append("*");
+                } else {
+                    output.append(" ");
+                }
+            }
+            output.append("\n");
+            for (int i = n; i >= 1; i--) {
+                for (int j = 1; j <= i; ++j) {
+                    if (j == 1 || i == j || i == n) {
+                        output.append("*");
+                    } else {
+                        output.append(" ");
+                    }
+                }
             }
             output.append("\n");
 
-            for (int s = n / 2 + 1; s >= 1; r--) {
-                output.append("* ");
-            }
-            for (int o = 1; o <= r; o++) {
-                System.out.println("* ");
-            }
         }
-        output.append("\n");
-
         return output.toString();
-    }
-
-    public static void main(String[] args) {
-
-        selection();
 
     }
+
 
 }
