@@ -4,12 +4,14 @@ import java.util.*;
 import act4.ClassPack.Animal;
 import act4.ClassPack.Circle;
 import act4.ClassPack.Employee;
+import act4.ClassPack.trafficLight;
 
 public class App {
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-       
+  
 
+/////////////////////////////////////////////////////////////       
         System.out.println("\nNumber 1");
 
         Tao person = new Tao();
@@ -20,51 +22,53 @@ public class App {
         person.showInfo();
 
 
+/////////////////////////////////////////////////////////////
         System.out.println("\nNumber 2");
 
         Animal hayop = new Animal();
         System.out.print("Enter name of animal: ");
-        String name = sc.next();
-        hayop.setName(name);
+        hayop.setName(sc.next());
 
         System.out.print("Enter breed of animal: ");
-        String breed = sc.next();
-        hayop.setBreed(breed);
-        
+        hayop.setBreed(sc.next());
         System.out.println("Animal name is: "+ hayop.getName() + ", and it is a: " + hayop.getBreed() + ".");
 
-
+/////////////////////////////////////////////////////////////
         System.out.println("\nNumber 3");
 
         Employee empliyado = new Employee();
         System.out.println("Enter name: ");
-        String name3 = sc.next();
-        empliyado.setName(name3);
+        empliyado.setName(sc.next());
 
         System.out.println("Enter Job Title: ");
-        String job = sc.next();
-        empliyado.setJobTitle(job);
+        empliyado.setJobTitle(sc.next());
 
         System.out.println("Enter Salary: ");
-        int salary = sc.nextInt();
-        empliyado.setSalary(salary);
+        empliyado.setSalary(sc.nextInt());
 
         System.out.println("Enter number of days attended: ");
-        int days = sc.nextInt();
-        empliyado.setAttendance(days);
+        empliyado.setAttendance(sc.nextInt());
         empliyado.printer();
-        
+
+/////////////////////////////////////////////////////////////
         System.out.println("\nNumber 4");
 
         Circle bilog = new Circle();
         System.out.println("Enter radius: ");
-        float radius = sc.nextFloat();
-        bilog.setRadius(radius);
+        bilog.setRadius(sc.nextFloat());
         bilog.resultsCircle();
 
+/////////////////////////////////////////////////////////////
+        System.out.println("Number 5");
+        trafficLight trapik = new trafficLight();
+        System.out.println("Enter new color: ");
+        trapik.setColor(sc.next());
 
-
-
+        System.out.println("Enter new duration: ");
+        trapik.setDuration(sc.nextInt());
+        
+        trapik.trafficControl();
 
     }
 }
+
