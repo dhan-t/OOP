@@ -11,18 +11,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.june5_oop.ui.userInputRetainer;
-
 public class GradeEncode extends AppCompatActivity {
-    private userInputRetainer inputRetainer;
-    private List<EditText> fieldCheckerG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade_encode);
-
-        inputRetainer = userInputRetainer.getInstance();
 
         EditText lnameg = findViewById(R.id.ptxtLNameG);
         EditText fnameg = findViewById(R.id.ptxtFNameG);
@@ -35,72 +29,53 @@ public class GradeEncode extends AppCompatActivity {
         EditText qz3 = findViewById(R.id.ptxtqz3);
         EditText qz4 = findViewById(R.id.ptxtqz4);
 
-        fieldCheckerG = new ArrayList<>();
-        fieldCheckerG.add(lnameg);
-        fieldCheckerG.add(fnameg);
-        fieldCheckerG.add(mnameg);
-        fieldCheckerG.add(absnt);
-        fieldCheckerG.add(exam);
-        fieldCheckerG.add(qz1);
-        fieldCheckerG.add(qz2);
-        fieldCheckerG.add(qz3);
-        fieldCheckerG.add(qz4);
-
-        if (InfoEncode.UserSession.loggedIn) {
-            displayToast("User info encoded!");
-            lnameg.setText(userInputRetainer.getInstance().LNameOnly());
-            fnameg.setText(userInputRetainer.getInstance().FNameOnly());
-            mnameg.setText(userInputRetainer.getInstance().MNameOnly());
-        } else {
-            displayToast("User info not encoded.");
-        }
-
         Button computeGRD = findViewById(R.id.btnCompute);
         computeGRD.setOnClickListener(v -> {
-            boolean fieldEmpty = false;
-            boolean inputCheck = false;
+            String lastname = lnameg.getText().toString().trim();
+            String firstname = fnameg.getText().toString().trim();
+            String midname = mnameg.getText().toString().trim();
 
-            for (EditText field : fieldCheckerG) {
-                String userInput = field.getText().toString().trim();
-                if (userInput.isEmpty()) {
-                    fieldEmpty = true;
-                    break;
-                }
-            }
-            for (EditText field : fieldCheckerG) {
-                String userInput = field.getText().toString().trim();
-                int inputNumber = Integer.parseInt(userInput);
-                if (inputNumber <= 1 || inputNumber >= 100) {
-                    inputCheck = true;
-                    break;
-                }
-            }
+            String attendanceStr = absnt.getText().toString().trim();
+            String examsStr = exam.getText().toString().trim();
+            String quiz1Str = qz1.getText().toString().trim();
+            String quiz2Str = qz2.getText().toString().trim();
+            String quiz3Str = qz3.getText().toString().trim();
+            String quiz4Str = qz4.getText().toString().trim();
 
-            if (fieldEmpty) {
+            if (lastname.isEmpty() || firstname.isEmpty() || midname.isEmpty() || attendanceStr.isEmpty() || examsStr.isEmpty() || quiz1Str.isEmpty() || quiz2Str.isEmpty() || quiz3Str.isEmpty() || quiz4Str.isEmpty()) {
                 displayToast("Please input all fields!");
-            } else if (inputCheck) {
-                displayToast("Please check grade inputs. ");
             } else {
-
                 try {
-                inputRetainer.fullNameCons(fnameg.getText().toString().trim(), mnameg.getText().toString().trim(), lnameg.getText().toString().trim());
-                inputRetainer.averageCalcCons(Integer.parseInt(absnt.getText().toString().trim()), Integer.parseInt(exam.getText().toString().trim()), Integer.parseInt(qz1.getText().toString().trim()), Integer.parseInt(qz2.getText().toString().trim()), Integer.parseInt(qz3.getText().toString().trim()), Integer.parseInt(qz4.getText().toString().trim()));
-                displayToast("Computing grades...");
+                    int attendance = Integer.parseInt(attendanceStr);
+                    int exams = Integer.parseInt(examsStr);
+                    int quiz1 = Integer.parseInt(quiz1Str);
+                    int quiz2 = Integer.parseInt(quiz2Str);
+                    int quiz3 = Integer.parseInt(quiz3Str);
+                    int quiz4 = Integer.parseInt(quiz4Str);
 
-                }catch (Exception e){
-                    e.printStackTrace();
+                    Intent intent = new Intent(GradeEncode.this, GradeView.class);
+                    intent.putExtra("firstname", firstname);
+                    intent.putExtra("midname", midname);
+                    intent.putExtra("lastname", lastname);
+                    intent.putExtra("attendance", attendance);
+                    intent.putExtra("exams", exams);
+                    intent.putExtra("quiz1", quiz1);
+                    intent.putExtra("quiz2", quiz2);
+                    intent.putExtra("quiz3", quiz3);
+                    intent.putExtra("quiz4", quiz4);
+
+                    startActivity(intent);
+                } catch (NumberFormatException e) {
+                    displayToast("Invalid input. Please enter valid numbers.");
                 }
-                Intent i = new Intent(GradeEncode.this, GradeView.class);
-                startActivity(i);
             }
         });
 
-        Button btnMenu = findViewById(R.id.btnMENUBTN);
+            Button btnMenu = findViewById(R.id.btnMENUBTN);
         btnMenu.setOnClickListener(v -> {
             Intent i = new Intent(GradeEncode.this, Menu.class);
             startActivity(i);
         });
-
     }
 
     private void displayToast(String message) {
