@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GradeView">
+
+    <TextView
+        android:id="@+id/txtTitleGV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grade View"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <TextView
+        android:id="@+id/txtRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remarks: \n96 - 100 = 4.00 \n90 - 95   = 3.50 \n84 - 89   = 3.00 \n78 - 83   = 2.50 \n72 - 77   = 2.00 \n66 - 71   = 1.50 \n60 - 65   = 1.00 \n0   - 59  =  INC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatusGV"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <TextView
+        android:id="@+id/txtFullNameGV"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:hint="Full Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleGV"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/txtCourseGV"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:hint="Course"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFullNameGV"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/txtAverageGV"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:hint="Average"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCourseGV"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/txtStatusGV"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:hint="Status"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAverageGV"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/txtExamGV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Exam"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatusGV"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <TextView
+        android:id="@+id/txtQz1GV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Quiz 1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtExamGV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtQz2GV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Quiz 2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtQz1GV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtQz3GV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Quiz 3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtQz2GV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtQz4GV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Quiz 4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtQz3GV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtAttendanceGV"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:hint="Attendance"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/txtRemarks"
+        app:layout_constraintTop_toBottomOf="@+id/txtQz4GV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnMenuGV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
