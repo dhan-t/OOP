@@ -3,20 +3,15 @@ package com.example.june5_oop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GradeEncode extends AppCompatActivity {
-
-    private List<EditText> fieldCheckerG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,87 +29,70 @@ public class GradeEncode extends AppCompatActivity {
         EditText qz3 = findViewById(R.id.ptxtqz3);
         EditText qz4 = findViewById(R.id.ptxtqz4);
 
-        fieldCheckerG = new ArrayList<>();
-        fieldCheckerG.add(lnameg);
-        fieldCheckerG.add(fnameg);
-        fieldCheckerG.add(mnameg);
-        fieldCheckerG.add(absnt);
-        fieldCheckerG.add(exam);
-        fieldCheckerG.add(qz1);
-        fieldCheckerG.add(qz2);
-        fieldCheckerG.add(qz3);
-        fieldCheckerG.add(qz4);
-
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        String lastName = lnameg.getText().toString().trim();
-        String firstName = fnameg.getText().toString().trim();
-        String middleName = mnameg.getText().toString().trim();
-
-        int attendance = Integer.parseInt(absnt.getText().toString().trim());
-        int examGrade = Integer.parseInt(exam.getText().toString().trim());
-        int quiz1Grade = Integer.parseInt(qz1.getText().toString().trim());
-        int quiz2Grade = Integer.parseInt(qz2.getText().toString().trim());
-        int quiz3Grade = Integer.parseInt(qz3.getText().toString().trim());
-        int quiz4Grade = Integer.parseInt(qz4.getText().toString().trim());
-
         Button computeGRD = findViewById(R.id.btnCompute);
-        computeGRD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean fieldEmpty = false;
+        computeGRD.setOnClickListener(v -> {
+            String lastname = lnameg.getText().toString().trim();
+            String firstname = fnameg.getText().toString().trim();
+            String midname = mnameg.getText().toString().trim();
 
-                for (EditText field : fieldCheckerG) {
-                    String userInput = field.getText().toString().trim();
+            String attendanceStr = absnt.getText().toString().trim();
+            String examsStr = exam.getText().toString().trim();
+            String quiz1Str = qz1.getText().toString().trim();
+            String quiz2Str = qz2.getText().toString().trim();
+            String quiz3Str = qz3.getText().toString().trim();
+            String quiz4Str = qz4.getText().toString().trim();
 
-                    if (userInput.isEmpty()) {
-                        fieldEmpty = true;
-                        break;
-                    }
-                }
+                if (lastname.isEmpty() || firstname.isEmpty() || midname.isEmpty() ||
+                    attendanceStr.isEmpty() || examsStr.isEmpty() ||
+                    quiz1Str.isEmpty() || quiz2Str.isEmpty() ||
+                    quiz3Str.isEmpty() || quiz4Str.isEmpty()) {
 
-                if (fieldEmpty) {
                     displayToast("Please input all fields!");
-                } else {
+            } else {
 
+                try {
+                    int attendance = Integer.parseInt(attendanceStr);
+                    int exams = Integer.parseInt(examsStr);
+                    int quiz1 = Integer.parseInt(quiz1Str);
+                    int quiz2 = Integer.parseInt(quiz2Str);
+                    int quiz3 = Integer.parseInt(quiz3Str);
+                    int quiz4 = Integer.parseInt(quiz4Str);
 
-                    int quizAverage = (quiz1Grade + quiz2Grade + quiz3Grade + quiz4Grade) / 4;
-                    double average = (attendance * 0.2) + (quizAverage * 0.3) + (examGrade * 0.5);
+                         if(attendance < 0 || attendance >100 ||
+                            exams < 0 || exams > 100 ||
+                            quiz1 < 0 || quiz1 > 100 ||
+                            quiz2 < 0 || quiz2 > 100 ||
+                            quiz3 < 0 || quiz3 > 100 ||
+                            quiz4 < 0 || quiz4 > 100) {
+                             displayToast("Please input all fields!");
+                         }else{
+                            Intent intent = new Intent(GradeEncode.this, GradeView.class);
+                            intent.putExtra("firstname", firstname);
+                            intent.putExtra("midname", midname);
+                            intent.putExtra("lastname", lastname);
+                            intent.putExtra("attendance", attendance);
+                            intent.putExtra("exams", exams);
+                            intent.putExtra("quiz1", quiz1);
+                            intent.putExtra("quiz2", quiz2);
+                            intent.putExtra("quiz3", quiz3);
+                            intent.putExtra("quiz4", quiz4);
 
-                    editor.putInt("ptxtAttdncs", attendance);
-                    editor.putInt("ptxtExam", examGrade);
-                    editor.putInt("ptxtqz1", quiz1Grade);
-                    editor.putInt("ptxtqz2", quiz2Grade);
-                    editor.putInt("ptxtqz3", quiz3Grade);
-                    editor.putInt("ptxtqz4", quiz4Grade);
-                    editor.apply();
-
-                    displayToast("Computing grades...");
-
-                    Intent i = new Intent(GradeEncode.this, GradeView.class);
-                    startActivity(i);
+                            startActivity(intent);
+                    }
+                } catch (NumberFormatException e) {
+                    displayToast("Invalid input. Please enter valid numbers.");
                 }
             }
         });
 
-        Button btnMenu = findViewById(R.id.btnMENUBTN);
-        btnMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GradeEncode.this, Menu.class);
-                startActivity(i);
-            }
+            Button btnMenu = findViewById(R.id.btnMENUBTN);
+        btnMenu.setOnClickListener(v -> {
+            Intent i = new Intent(GradeEncode.this, Menu.class);
+            startActivity(i);
         });
     }
 
     private void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-    }
-    public static class avgCalc {
-        public void accessAvg(double average) {
-            double avgAccess;
-            return avgAccess = average;
-        }
     }
 }
