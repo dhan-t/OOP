@@ -10,20 +10,20 @@
         android:id="@+id/txtTitleGrd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Encode Grades"
+        android:text="@string/encode_grades"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/txtTitleGrd2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Student Information"
+        android:text="@string/student_informationIV"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/ptxtLNameG"
@@ -37,40 +37,42 @@
         android:id="@+id/txtTitleGrd3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Grade Computation"
+        android:text="@string/grade_computation"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
+        app:layout_constraintVertical_bias="0.443" />
 
     <EditText
         android:id="@+id/ptxtFNameG"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtLNameG"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/ptxtMNameG"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="M.I."
+        android:hint="@string/m_i_GE"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ptxtFNameG"
         app:layout_constraintTop_toBottomOf="@+id/ptxtLNameG"
         app:layout_constraintVertical_bias="0.0" />
@@ -80,99 +82,106 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_nameGE"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintVertical_bias="0.271"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/ptxtExam"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Exam"
+        android:hint="@string/exam"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/ptxtAttdncs"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <EditText
+        android:id="@+id/ptxtAttdncs"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="320dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Attendance"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptxtFNameG"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:layout_constraintVertical_bias="0.873" />
 
     <EditText
         android:id="@+id/ptxtqz2"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Quiz 2"
+        android:hint="@string/quiz_2"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/ptxtqz1"
         app:layout_constraintTop_toBottomOf="@+id/ptxtExam"
-        app:layout_constraintVertical_bias="0.07" />
-
-    <EditText
-        android:id="@+id/ptxtqz4"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Quiz 4"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptxtqz2"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <EditText
         android:id="@+id/ptxtqz1"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Quiz 1"
+        android:hint="@string/quiz_1"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtAttdncs"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <EditText
         android:id="@+id/ptxtqz3"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Quiz 3"
+        android:hint="@string/quiz_3"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtqz1"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <EditText
-        android:id="@+id/ptxtAttdncs"
+        android:id="@+id/ptxtqz4"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="320dp"
+        android:layout_height="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Abscenses"
+        android:hint="@string/quiz_4"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptxtFNameG"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/ptxtqz3"
+        app:layout_constraintTop_toBottomOf="@+id/ptxtqz2"
+        app:layout_constraintVertical_bias="0.042" />
 
     <View
         android:id="@+id/divider3"
@@ -205,25 +214,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <Button
         android:id="@+id/btnCompute"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:text="COMPUTE GRADES"
+        android:text="Compute Grades"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleGrd3"
-        app:layout_constraintVertical_bias="0.595" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <Button
         android:id="@+id/btnMENUBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MENU"
+        android:text="Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
