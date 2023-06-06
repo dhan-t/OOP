@@ -10,7 +10,7 @@
         android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MENU"
+        android:text="@string/menu"
         android:textColorHighlight="#7C7C7C"
         android:textColorLink="#888888"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,40 +26,42 @@
         android:layout_height="43dp"
         android:layout_marginStart="4dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintVertical_bias="0.399"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/ptxtMName"
         android:layout_width="50dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:hint="M.I."
+        android:hint="@string/m_i"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ptxtFName"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintVertical_bias="0.399"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnSBMT"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.765" />
 
     <View
         android:id="@+id/divider"
@@ -77,48 +79,51 @@
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:layout_marginStart="52dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.316" />
+
+    <EditText
+        android:id="@+id/ptxtEmail"
+        android:layout_width="300dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="52dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptxtContact2"
+        app:layout_constraintVertical_bias="0.032" />
 
     <EditText
         android:id="@+id/ptxtCourse"
         android:layout_width="200dp"
         android:layout_height="43dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Course"
+        android:hint="@string/course"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtContact2"
-        app:layout_constraintVertical_bias="0.073" />
-
-    <EditText
-        android:id="@+id/ptxtYrLvl"
-        android:layout_width="50dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:hint="Yr Lvl"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ptxtCourse"
-        app:layout_constraintTop_toBottomOf="@+id/ptxtBrtYear"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.221" />
 
     <EditText
         android:id="@+id/ptxtBABS"
         android:layout_width="50dp"
         android:layout_height="43dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="BS/BA"
+        android:hint="@string/bs_ba"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,15 +131,32 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtContact2"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.221" />
+
+    <EditText
+        android:id="@+id/ptxtYrLvl"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/yr_lvl"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ptxtCourse"
+        app:layout_constraintTop_toBottomOf="@+id/ptxtBrtYear"
+        app:layout_constraintVertical_bias="0.221" />
 
     <EditText
         android:id="@+id/ptxtContact2"
         android:layout_width="200dp"
         android:layout_height="43dp"
-        android:ems="10"
-        android:hint="Contact Number"
-        android:inputType="number"
+        android:autofillHints=""
+        android:ems="11"
+        android:hint="@string/contact_number"
+        android:inputType="phone"
+        android:maxLength="999"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.246"
@@ -147,14 +169,15 @@
         android:layout_width="100dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:hint="Birthyear"
+        android:hint="@string/birthyear"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptxtFName"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.043"
+        android:autofillHints="" />
 
     <View
         android:id="@+id/divider2"
@@ -165,14 +188,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.812" />
 
     <TextView
         android:id="@+id/txtTitleGrd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="Encode Information"
+        android:text="@string/encode_information"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/ptxtFName"
