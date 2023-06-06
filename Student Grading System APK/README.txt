@@ -2,6 +2,9 @@ For Object Oriented Programming subject during our freshman third semester.
 
 (June 5, 2023)
 
+Username: admin
+Password: admin123
+
 Things to improve on:
 - Data access within the project.
 - Code readability and proper blocking.
