@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:layout_editor_absoluteY="401dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtvFILLERT"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#235789"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider20"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvTitle3rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criminal History"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="  List of previous convictions:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="Tick &quot;YES&quot; for that that are applicable to you."
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/divider27"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtvQ1"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:text="1. Have you ever been found guilty of any administrative offense?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtvFiller1"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:text="                 " />
+
+                    <CheckBox
+                        android:id="@+id/chckbxYES1"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="YES" />
+
+                    <CheckBox
+                        android:id="@+id/chckbxNO1"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="NO" />
+                </TableRow>
+
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/etxtQ1"
+                android:layout_width="390dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="If YES, give details."
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider28"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtvQ2"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:text="2. Have you been criminally charged before any court?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtvFiller2"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:text="                 " />
+
+                    <CheckBox
+                        android:id="@+id/chckbxYES2"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="YES" />
+
+                    <CheckBox
+                        android:id="@+id/chckbxNO2"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="NO" />
+                </TableRow>
+
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/etxtQ2"
+                android:layout_width="390dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="If YES, give details."
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="227dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtvQ3"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:text="3. Have you ever been convicted of any crime or violation of any law, decree, ordinance or regulation by any court or tribunal?"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/txtvFiller3"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:text="                 " />
+
+                    <CheckBox
+                        android:id="@+id/chckbxYES3"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="YES" />
+
+                    <CheckBox
+                        android:id="@+id/chckbxNO3"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="NO" />
+                </TableRow>
+
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/etxtQ3"
+                android:layout_width="390dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="If YES, give details."
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider30"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="606dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtv4"
+                android:layout_width="390dp"
+                android:layout_height="99dp"
+                android:text="Pursuant to: (a) Indigenous People's Act (RA 8371); (b) Magna Carta for Disabled Persons (RA 7277); and (c) Solo Parents Welfare Act of 2000 (RA 8972).\nPlease answer the following items:"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtvQ4"
+                    android:layout_width="430dp"
+                    android:layout_height="wrap_content"
+                    android:text="a. Are you a member of any indigenous group?"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtvFiller4a"
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:text="                 " />
+
+                        <CheckBox
+                            android:id="@+id/chckbxYES4a"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="YES" />
+
+                        <CheckBox
+                            android:id="@+id/chckbxNO4a"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="NO" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <EditText
+                    android:id="@+id/etxtQ4a"
+                    android:layout_width="390dp"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="If YES, give details."
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider32"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtvQ4b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="b. Are you a person with disability?"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtvFiller4b"
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:text="                 " />
+
+                        <CheckBox
+                            android:id="@+id/chckbxYES4b"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="YES" />
+
+                        <CheckBox
+                            android:id="@+id/chckbxNO4b"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="NO" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <EditText
+                    android:id="@+id/etxtQ4b"
+                    android:layout_width="390dp"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="If YES, give details."
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider33"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtvQ4c"
+                    android:layout_width="430dp"
+                    android:layout_height="wrap_content"
+                    android:text="c. Are you a solo parent?"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtvFiller4c"
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:text="                 " />
+
+                        <CheckBox
+                            android:id="@+id/chckbxYES4c"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="YES" />
+
+                        <CheckBox
+                            android:id="@+id/chckbxNO4c"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="NO" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <EditText
+                    android:id="@+id/etxtQ4c"
+                    android:layout_width="390dp"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="If YES, give details."
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider34"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSubmit3rd"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#000000"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/btnReturn3rd"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#C1292E"
+                android:text="Return"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
