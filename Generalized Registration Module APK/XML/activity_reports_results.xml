@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FDFFFC"
+    android:gravity="center"
+    android:textAlignment="inherit"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:layout_editor_absoluteY="401dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtvFiller4th"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#161925"
+            android:backgroundTint="#161925"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvTitle4th"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report Result"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="48sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/filler14"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvFullName"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvEmail"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvContactNum"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Contact Number"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvGender4t"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvCivilStatus4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Civil Status"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvHeight"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvWeight"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/filler16"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider26"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="ID's"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvPagIbigID4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="PagIbig ID"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvPhilhealthID4th2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Philhealth ID"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvTINID4th3"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="TIN ID"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvGSISID4th2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="GSIS ID"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/filler15"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider36"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler17"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="EMERGENCY CONTACT"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider37"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvEmergencyName"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Emergency Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvEmergencyContact"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Emergency Contact"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtvRelationship"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Relationship"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/divider38"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler8"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider39"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvTitleEduc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Educational Background"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvElemName4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Elementary Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvElemCourse4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Elementary Course"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider40"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler3"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider41"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvSecondaryName4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Secondary Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvSecondaryName4th2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Secondary Course"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider43"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler4"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider42"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvVocationalName4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Vocational Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvVocationalCourse4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Vocational Course"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider44"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler5"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider45"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvCollegeName4th3"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="College Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvCollegeCourse4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="College Course"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider46"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler6"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider47"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvGradStudName4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="GraduateStudy Name"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvGradstudCourse4th"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Graduate study Course"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider48"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/filler7"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider49"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvTitleCrime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criminal Background:"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider50"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/txtvDisp1"
+            android:layout_width="370dp"
+            android:layout_height="67dp"
+            android:text="Have you ever been found guilty of any administrative offense?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes1"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 1"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler2"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvDisp"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Have you been criminally charged before any court?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 2"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler9"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvDisp2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Have you ever been convicted of any crime or violation of any law, decree, ordinance, or regulation by any court or tribunal?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes3"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 3"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler10"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvDisp3"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Are you a member of any indigenous group?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes4"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 4"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler11"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvDisp4"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Are you a person with disability?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes4b"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 4b"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler12"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txtvDisp5"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Are you a solo parent?"
+            android:textAlignment="center"
+            android:textColor="#161925"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtvCrimYes4c"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Crim ifyes 4c"
+            android:textAlignment="inherit"
+            android:textColor="#161925"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/filler13"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/btnReturnHome"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#F1D302"
+            android:text="Home"
+            android:textColor="#161925" />
+
+    </LinearLayout>
+</ScrollView>
